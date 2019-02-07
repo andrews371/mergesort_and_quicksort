@@ -27,7 +27,7 @@ public class QuickSort {
             	else if (v[dir] > pivo) {
                 	dir = dir - 1;
             	}
-            	if (esq <= dir){
+            	else if (esq <= dir){
                	aux = v[esq];
                	v[esq] = v[dir];
                	v[dir] = aux;
