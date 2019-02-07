@@ -6,9 +6,9 @@ public class QuickSort {
     	public static void quickSort(int[] v, int esquerda, int direita) {
     	int pivo;
     	if (esquerda < direita) {
-        	pivo = particao(v, esquerda, direita);
-     	 quickSort(v, esquerda, pivo -1);
-   	 quickSort(v, pivo+1, direita); 	 
+            pivo = particao(v, esquerda, direita);
+     	    quickSort(v, esquerda, pivo -1);
+   	    quickSort(v, pivo+1, direita); 	 
    	 
       	}
 
@@ -28,12 +28,12 @@ public class QuickSort {
                 	dir = dir - 1;
             	}
             	else if (esq <= dir){
-               	aux = v[esq];
-               	v[esq] = v[dir];
-               	v[dir] = aux;
-   		esq = esq + 1;
-               	dir = dir - 1;
-     		 }
+               	    aux = v[esq];
+               	    v[esq] = v[dir];
+                    v[dir] = aux;
+   		    esq = esq + 1;
+               	    dir = dir - 1;
+     		}
    	}
        
    	v[esquerda] = v[dir];
@@ -53,25 +53,25 @@ public class QuickSort {
     	public static void main(String args[]) {
         	int tam;
     	 
-		 	Scanner entrada = new Scanner(System.in);
+		 Scanner entrada = new Scanner(System.in);
     	 
         	System.out.print("Informe o tamanho do array: ");
         	tam = entrada.nextInt();
     	 
         	int[] array = new int[tam];
     	 
-    	for (int i = 0; i < tam; i++) {
-        	System.out.print("Digite o elemento " + (i+1) + ": ");
-        	array[i] = entrada.nextInt();
-    	}
-    	System.out.println();
-    	System.out.println("array inicial");  
-    	printArray(array);
- 
-    	quickSort(array, 0, array.length - 1);
-       
-    	System.out.println("\narray ordenado");  
-        	printArray(array);  
+		for (int i = 0; i < tam; i++) {
+			System.out.print("Digite o elemento " + (i+1) + ": ");
+			array[i] = entrada.nextInt();
+		}
+		System.out.println();
+		System.out.println("array inicial");  
+		printArray(array);
+
+		quickSort(array, 0, array.length - 1);
+
+		System.out.println("\narray ordenado");  
+			printArray(array);  
     	}
  
 }
